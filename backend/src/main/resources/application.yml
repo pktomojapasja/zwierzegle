@@ -1,0 +1,8 @@
+springdoc:
+  api-docs:
+    enabled: ${API_DOCS_ENABLED:true}
+  swagger-ui:
+    enabled: ${SWAGGER_UI_ENABLED:true}
+  info:
+    title: "Zwierzegle API"
+    description: "Zwierzegle API - część backend dla projektu Zwierzegle na Projekty Zespołowe 2022"
