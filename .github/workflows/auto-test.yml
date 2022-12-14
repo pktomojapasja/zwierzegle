@@ -1,0 +1,16 @@
+name: Auto Test
+
+on:
+  push:
+    branches: 
+      - '**'
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build with Maven
+      run: mvn test
