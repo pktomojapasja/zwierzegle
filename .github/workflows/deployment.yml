@@ -1,0 +1,28 @@
+name: Deployment
+
+on:
+  push:
+    branches: 
+      - 'main'
+
+jobs:
+  deployment:
+
+    runs-on: self-hosted
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install dependencies
+      working-directory: frontend
+      run: npm install
+    - name: build Angular
+      working-directory: frontend
+      run: ng build
+    - name: Build with Maven
+      working-directory: backend
+      run: mvn -B clean install
+    - name: Docker
+      run: docker build -t zwierzegle:latest --build-arg PROFILE=PRODUCTION -f ./docker/zwierzegle.Dockerfile .
+    - name: Deploy
+      run: docker compose -f docker/docker-compose.yml up -d --force-recreate --build zwierzegle
+
