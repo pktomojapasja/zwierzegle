@@ -7,7 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ZwierzegleBackendApplication {
 
 	public static void main(String[] args) {
+
+		System.out.println("test123");
 		SpringApplication.run(ZwierzegleBackendApplication.class, args);
+
 	}
 
 }
