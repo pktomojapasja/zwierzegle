@@ -2,5 +2,5 @@ version: "3.9"
 services:
   zwierzegle:
     image: "zwierzegle:latest"
-    port: 
+    ports: 
     - "127.0.0.1:8080:${PORT:-8080}" 
