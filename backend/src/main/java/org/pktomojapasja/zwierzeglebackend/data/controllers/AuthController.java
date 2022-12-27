@@ -1,11 +1,11 @@
 package org.pktomojapasja.zwierzeglebackend.data.controllers;
 
 
-import org.pktomojapasja.zwierzeglebackend.data.model.User;
+import lombok.RequiredArgsConstructor;
 import org.pktomojapasja.zwierzeglebackend.data.model.LoginCredentials;
+import org.pktomojapasja.zwierzeglebackend.data.model.User;
 import org.pktomojapasja.zwierzeglebackend.data.repository.IUserRepo;
 import org.pktomojapasja.zwierzeglebackend.data.security.JWTUtil;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.AuthenticationException;
@@ -20,15 +20,16 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/auth")
+@RequiredArgsConstructor
 public class AuthController {
 
-    @Autowired private IUserRepo userRepo;
-    @Autowired private JWTUtil jwtUtil;
-    @Autowired private AuthenticationManager authManager;
-    @Autowired private PasswordEncoder passwordEncoder;
+    private final IUserRepo userRepo;
+    private final JWTUtil jwtUtil;
+    private final AuthenticationManager authManager;
+    private final PasswordEncoder passwordEncoder;
 
     @PostMapping("/register")
-    public Map<String, Object> registerHandler(@RequestBody User user){
+    public Map<String, Object> registerHandler(@RequestBody User user) {
         String encodedPass = passwordEncoder.encode(user.getPassword());
         user.setPassword(encodedPass);
         user = userRepo.save(user);

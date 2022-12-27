@@ -20,6 +20,4 @@ public class UserController {
         String email = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         return userRepo.findByEmail(email).get();
     }
-
-
 }
