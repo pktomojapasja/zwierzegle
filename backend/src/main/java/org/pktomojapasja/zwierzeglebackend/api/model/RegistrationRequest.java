@@ -18,6 +18,7 @@ public class RegistrationRequest {
                 .build();
     }
 
+    @Value
     static class Registration {
         @Email
         String email;
@@ -26,6 +27,7 @@ public class RegistrationRequest {
         String type;
     }
 
+    @Value
     static class Contact {
         String name;
         String organizationName;
