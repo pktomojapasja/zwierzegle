@@ -1,8 +1,8 @@
-package org.pktomojapasja.zwierzeglebackend.data.security;
+package org.pktomojapasja.zwierzeglebackend.config;
 
 
 import jakarta.servlet.http.HttpServletResponse;
-import org.pktomojapasja.zwierzeglebackend.data.repository.IUserRepo;
+import org.pktomojapasja.zwierzeglebackend.data.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,7 +21,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class SecurityConfig {
 
     @Autowired
-    private IUserRepo userRepo;
+    private UserRepository userRepo;
     @Autowired
     private JWTFilter filter;
     @Autowired

@@ -1,7 +1,7 @@
-package org.pktomojapasja.zwierzeglebackend.data.security;
+package org.pktomojapasja.zwierzeglebackend.config;
 
-import org.pktomojapasja.zwierzeglebackend.data.model.User;
-import org.pktomojapasja.zwierzeglebackend.data.repository.IUserRepo;
+import org.pktomojapasja.zwierzeglebackend.data.user.User;
+import org.pktomojapasja.zwierzeglebackend.data.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -16,7 +16,7 @@ import java.util.Optional;
 public class MyUserDetailsService implements UserDetailsService {
 
     @Autowired
-    private IUserRepo userRepo;
+    private UserRepository userRepo;
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {

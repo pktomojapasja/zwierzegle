@@ -1,4 +1,4 @@
-package org.pktomojapasja.zwierzeglebackend.data.security;
+package org.pktomojapasja.zwierzeglebackend.config;
 
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import jakarta.servlet.FilterChain;
