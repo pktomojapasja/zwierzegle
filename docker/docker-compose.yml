@@ -5,9 +5,9 @@ services:
     image: postgres
     restart: always
     environment:
-      POSTGRES_USER: ${DB_USER:-zwierzegle}
-      POSTGRES_PASSWORD: ${DB_USER:-zwierzegle}
-      POSTGRES_DB: ${DB_USER:-zwierzegle}
+      POSTGRES_USER: ${DB_USER:-zwierzegle_user}
+      POSTGRES_PASSWORD: ${DB_PASS:-zwierzegle}
+      POSTGRES_DB: ${DB_NAME:-zwierzegle}
 
   zwierzegle:
     image: "zwierzegle:latest"
@@ -17,4 +17,6 @@ services:
       - "127.0.0.1:${PORT:-8080}:8080"
     environment:
       DB_HOST: db
-      
+      DB_USER: ${DB_USER:-zwierzegle_user}
+      DB_PASS: ${DB_PASS:-zwierzegle}
+      DB_NAME: ${DB_NAME:-zwierzegle}
