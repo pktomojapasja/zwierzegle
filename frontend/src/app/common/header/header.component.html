@@ -1,7 +1,7 @@
 <div id="header">
     <nav class="navbar navbar-expand-md">
         <div class="container-fluid">
-            <a class="navbar-brand abs" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Zwierzegle</a>
+            <a class="navbar-brand abs" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page"><img src="assets/images/zwierzegle-logo.png" alt="Zwierzegle" /></a>
             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -18,7 +18,7 @@
                     </li>
                     <ng-template [ngIf]="!isLoggedIn">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Rejestracja</a>
+                        <a class="nav-link" routerLink="/register">Rejestracja</a>
                     </li>
                     <li>
                         <a class="nav-link btn btn-primary btn-sm" routerLink="/login">Zaloguj się</a>
