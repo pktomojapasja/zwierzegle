@@ -6,3 +6,19 @@ springdoc:
   info:
     title: "Zwierzegle API"
     description: "Zwierzegle API - część backend dla projektu Zwierzegle na Projekty Zespołowe 2022"
+
+jwt_secret: PK_TO_MOJA_PASJA_ZWIERZEGLE_2022/2023
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/zwierzegle"
+    username: zwierzegle_user
+    password: zwierzegle
+  security:
+    user:
+      name: config
+      password: configPassword
