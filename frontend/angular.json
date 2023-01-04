@@ -68,7 +68,8 @@
               "browserTarget": "zwierzegle-frontend:build:production"
             },
             "development": {
-              "browserTarget": "zwierzegle-frontend:build:development"
+              "browserTarget": "zwierzegle-frontend:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
