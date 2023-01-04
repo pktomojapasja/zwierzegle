@@ -1,7 +1,6 @@
-package org.pktomojapasja.zwierzeglebackend.data.user;
+package org.pktomojapasja.zwierzeglebackend.domain.users;
 
 import lombok.RequiredArgsConstructor;
-import org.pktomojapasja.zwierzeglebackend.api.model.LoginRequest;
 import org.pktomojapasja.zwierzeglebackend.config.JWTUtil;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -23,10 +22,10 @@ public class UserService {
         return jwtUtil.generateToken(user.getEmail());
     }
 
-    public String login(LoginRequest loginRequest) {
+    public String login(Credentials credentials) {
         UsernamePasswordAuthenticationToken authInputToken =
-                new UsernamePasswordAuthenticationToken(loginRequest.getEmail(), loginRequest.getPassword());
+                new UsernamePasswordAuthenticationToken(credentials.getEmail(), credentials.getPassword());
         authManager.authenticate(authInputToken);
-        return jwtUtil.generateToken(loginRequest.getEmail());
+        return jwtUtil.generateToken(credentials.getEmail());
     }
 }

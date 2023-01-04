@@ -1,4 +1,4 @@
-package org.pktomojapasja.zwierzeglebackend.data.user;
+package org.pktomojapasja.zwierzeglebackend.domain.users;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

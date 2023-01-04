@@ -1,10 +1,10 @@
-package org.pktomojapasja.zwierzeglebackend.api.model;
+package org.pktomojapasja.zwierzeglebackend.api.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Value;
 
 @Value
 @AllArgsConstructor(staticName = "of")
-public class TokenResponse {
+class TokenResponse {
     String token;
 }

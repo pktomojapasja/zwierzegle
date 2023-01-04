@@ -1,12 +1,13 @@
-package org.pktomojapasja.zwierzeglebackend.api.model;
+package org.pktomojapasja.zwierzeglebackend.api.auth;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Pattern;
 import lombok.Value;
-import org.pktomojapasja.zwierzeglebackend.data.user.User;
+import org.pktomojapasja.zwierzeglebackend.api.Constraints;
+import org.pktomojapasja.zwierzeglebackend.domain.users.User;
 
 @Value
-public class RegistrationRequest {
+class RegistrationRequest {
     Registration registration;
     Contact contact;
 

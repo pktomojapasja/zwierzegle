@@ -1,11 +1,8 @@
-package org.pktomojapasja.zwierzeglebackend.api;
+package org.pktomojapasja.zwierzeglebackend.api.auth;
 
 
 import lombok.RequiredArgsConstructor;
-import org.pktomojapasja.zwierzeglebackend.api.model.LoginRequest;
-import org.pktomojapasja.zwierzeglebackend.api.model.RegistrationRequest;
-import org.pktomojapasja.zwierzeglebackend.api.model.TokenResponse;
-import org.pktomojapasja.zwierzeglebackend.data.user.UserService;
+import org.pktomojapasja.zwierzeglebackend.domain.users.UserService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,7 +21,7 @@ public class AuthApi {
 
     @PostMapping("/login")
     public TokenResponse login(LoginRequest loginRequest) {
-        String token = userService.login(loginRequest);
+        String token = userService.login(loginRequest.toCredentials());
         return TokenResponse.of(token);
     }
 }

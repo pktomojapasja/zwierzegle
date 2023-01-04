@@ -1,7 +1,7 @@
-package org.pktomojapasja.zwierzeglebackend.api;
+package org.pktomojapasja.zwierzeglebackend.api.auth;
 
-import org.pktomojapasja.zwierzeglebackend.data.user.User;
-import org.pktomojapasja.zwierzeglebackend.data.user.UserRepository;
+import org.pktomojapasja.zwierzeglebackend.domain.users.User;
+import org.pktomojapasja.zwierzeglebackend.domain.users.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
