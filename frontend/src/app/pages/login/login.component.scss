@@ -1,12 +1,3 @@
-#login-form { 
-    margin: 2em auto;
-    position: relative;
-    padding: 20px;
-    width: 50%;
-    font-family: Monsterrat;
-
-}
-
 .card.card-container {
     border: unset;
     outline: none;
@@ -34,19 +25,43 @@
 
 #loginBtn {
     margin: auto;
-    position: absolute;
+    position: relative;
     width: 100%;
     color: #FFFFFF;
     border-radius: 17px;
     height: 42px;
 }
 
-.login-title {
-    font-size: 40px;
-    position: relative;
+.social-group {
     text-align: center;
-    justify-content: center;
-    background: -webkit-linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(229,141,42,1) 61%, rgba(255,253,0,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    margin: 1em auto;
+}
+
+.submit {
+    margin: 10px;
+    text-align: center;
+    border: unset;
+    background-color: transparent;
+}
+
+#facebookBtn, #googleBtn {
+    margin: auto 10px;
+    text-align: center;
+    border-radius: 17px;
+    width: 150px;
+}
+
+#facebookBtn {
+    background: url('../../../assets/images/facebook-icon.png');
+    background-repeat: no-repeat;
+    background-color: #3B5998;
+    color: #FFFFFF;
+    background-position-x: 5px;
+}
+
+#googleBtn {
+    background: url('../../../assets/images/google-icon.png');
+    background-repeat: no-repeat;
+    background-color: #FFFFFF;
+    background-position-x: 5px;
 }
