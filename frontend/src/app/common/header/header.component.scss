@@ -7,5 +7,29 @@
 }
 #header {
     background-color: #E58D2A;
-    padding-bottom: 25px;
+    //padding-bottom: 25px;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-expand-md {
+    font-weight: bold;
+    font-family: Montserrat;
+}
+
+#loginBtn {
+    border-radius: 17px;
+    padding: auto;
+    margin: auto;
+    color: #FFFFFF;
+    font-weight: lighter;
+}
+
+#verticalLine {
+    border-left: 1px solid black;
+    margin: auto;
+    height: 40px;
 }
