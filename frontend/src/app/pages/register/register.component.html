@@ -3,8 +3,8 @@
         <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
             <div class="register-title">Rejestracja</div>
             <div class="form-group">
-                <button name="submit">Użytkownik</button>
-                <button name="submit">Fundacja</button>
+                <button name="submit" id="userOptionBtn">Użytkownik</button>
+                <button name="submit" id="foundationOptionBtn">Fundacja</button>
             </div>
             <div class="form-group">
                 <div class="form-group">
@@ -13,9 +13,6 @@
                 <div class="form-group">
                     <input type="text" class="form-control" name="password" placeholder="Hasło" id="passInput" [(ngModel)]="form.registration.password" />
                 </div>
-            </div>
-            <div class="form-group">
-
             </div>
             <div class="form-group">
                 <button class="btn btn-primary btn-block" id="registerBtn">Zarejestruj się</button>
