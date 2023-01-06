@@ -1,17 +1,16 @@
-<div id="login-form">
+<div id="login-form" >
     <div class="card card-container">
         <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
-            <div class="form-group">
-                <label for="email">Username</label>
-                <input type="text" class="form-control" name="email" [(ngModel)]="form.email" required
+            <div class="login-title">Logowanie</div>
+            <div class="form-group" id="emailContainer">
+                <input type="text" class="form-control" placeholder="E-mail" id="emailInput" name="email" [(ngModel)]="form.email" required
                     #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.errors }" />
                 <div *ngIf="email.errors && f.submitted" class="invalid-feedback">
                     Email is required!
                 </div>
             </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" name="password" [(ngModel)]="form.password" required
+            <div class="form-group" id="passwordContainer">
+                <input type="password" class="form-control" placeholder="Hasło" id="passInput" name="password" [(ngModel)]="form.password" required
                     minlength="6" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.errors }" />
                 <div *ngIf="password.errors && f.submitted" class="invalid-feedback">
                     <div *ngIf="password.errors['required']">Password is required</div>
@@ -20,15 +19,23 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group">
-                <button class="btn btn-primary btn-block">
-                    Login
+            <div class="form-group login-btn-container">
+                <button class="btn btn-primary btn-block" id="loginBtn">
+                    Zaloguj się
                 </button>
             </div>
             <div class="form-group">
                 <div *ngIf="f.submitted && isLoginFailed" class="alert alert-danger" role="alert">
                     Login failed: {{ errorMessage }}
                 </div>
+            </div>
+            <div class="social-group">
+                <button class="submit" routerLink="/register">Zarejestruj się</button>
+                <button class="submit">Zresetuj hasło</button>
+            </div>
+            <div class="social-group">
+                <button class="submit" id="facebookBtn" onclick="window.location.href='https://facebook.com';">Facebook</button>
+                <button class="submit" id="googleBtn" onclick="window.location.href='https://google.com';">Google</button>
             </div>
         </form>
 

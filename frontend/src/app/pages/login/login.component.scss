@@ -1,4 +1,71 @@
-#login-form { 
-    width: 50%; 
+.card.card-container {
+    border: unset;
+    outline: none;
+    background: transparent;
+}
+
+.form-control {
     margin: 2em auto;
+    padding: auto;
+}
+
+#emailInput {
+    margin: 2em auto;
+    margin-bottom: 1em;
+    position: relative;
+    border-radius: 17px;
+}
+
+#passInput {
+    margin: 2em auto;
+    margin-top: 1em;
+    position: relative;
+    border-radius: 17px;
+}
+
+#loginBtn {
+    margin: auto;
+    position: relative;
+    width: 100%;
+    color: #FFFFFF;
+    border-radius: 17px;
+    height: 42px;
+}
+
+.social-group {
+    text-align: center;
+    margin: 1em auto;
+}
+
+.submit {
+    margin: 10px;
+    text-align: center;
+    border: unset;
+    background-color: transparent;
+}
+
+#facebookBtn, #googleBtn {
+    margin: auto 10px;
+    text-align: center;
+    border-radius: 17px;
+    width: 150px;
+}
+
+#facebookBtn {
+    background: url('../../../assets/images/facebook-icon.png');
+    background-repeat: no-repeat;
+    background-color: #3B5998;
+    color: #FFFFFF;
+    background-position-x: 5px;
+    background-position-y: 5px;
+    height: 35px;
+}
+
+#googleBtn {
+    background: url('../../../assets/images/google-icon.png');
+    background-repeat: no-repeat;
+    background-color: #FFFFFF;
+    background-position-x: 5px;
+    background-position-y: 5px;
+    height: 35px;
 }

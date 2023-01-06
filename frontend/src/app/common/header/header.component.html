@@ -14,14 +14,17 @@
                         <a class="nav-link" routerLink="/blog" routerLinkActive="active" ariaCurrentWhenActive="page">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Kontakt</a>
+                        <a class="nav-link" routerLink="/contact">Kontakt</a>
                     </li>
                     <ng-template [ngIf]="!isLoggedIn">
                     <li class="nav-item">
-                        <a class="nav-link" routerLink="/register">Rejestracja</a>
+                        <a class="nav-link" id="registerBtn" routerLink="/register">Rejestracja</a>
                     </li>
                     <li>
-                        <a class="nav-link btn btn-primary btn-sm" routerLink="/login">Zaloguj się</a>
+                        <a class="nav-link vertical-line" id="verticalLine"></a>
+                    </li>
+                    <li>
+                        <a class="nav-link btn btn-primary btn-sm" id="loginBtn" routerLink="/login">Zaloguj się</a>
                     </li>
                     </ng-template>
                     <li *ngIf="isLoggedIn">

@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#contact-form {
+    background-color: #E58D2A;
+    border-radius: 17px;
+    margin: 4em auto;
+    height: 400px;
+    width: 60%;
+    flex-direction: row;
+    text-align: center;
+    display: flex;
+}
+.box1 {
+    flex-grow: 2;
+    border-right: solid 1px #FFFFFF;
+    height: 100%;
+    width: 50%;
+    margin: auto;
+    height: 70%;
+    background-image: url('../../../assets/images/contact.png');
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position-y: 70%;
+    background-position-x: 50%;
+}
+
+.contact-description {
+    color: #eee8e2;
+    text-decoration: none;
+    text-align: left;
+    display: flex;
+    margin: 7em auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-title {
+    color: #eee8e2;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+.box2 {
+    flex-grow: 2;
+    height: 100%;
+    width: 50%;
+}
