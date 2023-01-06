@@ -15,6 +15,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './pages/register/register.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { UserRegisterComponent } from './pages/user-register/user-register.component';
+import { FoundationRegisterComponent } from './pages/foundation-register/foundation-register.component';
+import { ChangePasswordComponent } from './pages/change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { ContactComponent } from './pages/contact/contact.component';
     FooterComponent,
     LoginComponent,
     RegisterComponent,
-    ContactComponent
+    ContactComponent,
+    UserRegisterComponent,
+    FoundationRegisterComponent,
+    ChangePasswordComponent,
   ],
   imports: [
     BrowserModule,

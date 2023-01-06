@@ -7,7 +7,6 @@
 }
 #header {
     background-color: #E58D2A;
-    //padding-bottom: 25px;
 }
 
 .nav-item {
@@ -20,7 +19,7 @@
     font-family: Montserrat;
 }
 
-#loginBtn {
+#signInBtn {
     border-radius: 17px;
     padding: auto;
     margin: auto;
@@ -29,7 +28,7 @@
 }
 
 #verticalLine {
-    border-left: 1px solid black;
+    border-left: 1px solid grey;
     margin: auto;
     height: 40px;
 }

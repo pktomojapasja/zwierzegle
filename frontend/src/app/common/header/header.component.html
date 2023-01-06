@@ -18,13 +18,13 @@
                     </li>
                     <ng-template [ngIf]="!isLoggedIn">
                     <li class="nav-item">
-                        <a class="nav-link" id="registerBtn" routerLink="/register">Rejestracja</a>
+                        <a class="nav-link" id="registrationBtn" routerLink="/register">Rejestracja</a>
                     </li>
                     <li>
                         <a class="nav-link vertical-line" id="verticalLine"></a>
                     </li>
                     <li>
-                        <a class="nav-link btn btn-primary btn-sm" id="loginBtn" routerLink="/login">Zaloguj się</a>
+                        <a class="nav-link btn btn-primary btn-sm" id="signInBtn" routerLink="/login">Zaloguj się</a>
                     </li>
                     </ng-template>
                     <li *ngIf="isLoggedIn">
