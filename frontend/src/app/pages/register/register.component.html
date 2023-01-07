@@ -1,0 +1,22 @@
+<div id="register-form">
+    <div class="card card-container">
+        <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+            <div class="register-title">Rejestracja</div>
+            <div class="form-group">
+                <button name="submit" id="userOptionBtn">Użytkownik</button>
+                <button name="submit" id="foundationOptionBtn">Fundacja</button>
+            </div>
+            <div class="form-group">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="email" placeholder="E-mail" id="emailInput" [(ngModel)]="form.registration.email" />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="password" placeholder="Hasło" id="passInput" [(ngModel)]="form.registration.password" />
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-block" id="registerBtn">Zarejestruj się</button>
+            </div>
+        </form>
+    </div>
+</div>
