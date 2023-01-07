@@ -18,6 +18,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { UserRegisterComponent } from './pages/user-register/user-register.component';
 import { FoundationRegisterComponent } from './pages/foundation-register/foundation-register.component';
 import { ChangePasswordComponent } from './pages/change-password/change-password.component';
+import { HowCanYouHelpComponent } from './pages/how-can-you-help/how-can-you-help.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ChangePasswordComponent } from './pages/change-password/change-password
     UserRegisterComponent,
     FoundationRegisterComponent,
     ChangePasswordComponent,
+    HowCanYouHelpComponent,
   ],
   imports: [
     BrowserModule,

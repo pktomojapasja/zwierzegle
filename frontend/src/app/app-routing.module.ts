@@ -9,6 +9,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { UserRegisterComponent } from './pages/user-register/user-register.component';
 import { FoundationRegisterComponent } from './pages/foundation-register/foundation-register.component';
 import { ChangePasswordComponent } from './pages/change-password/change-password.component';
+import { HowCanYouHelpComponent } from './pages/how-can-you-help/how-can-you-help.component';
 
 const routes: Routes = [
   {path:  "", pathMatch:  "full", component: HomeComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path: "contact", component: ContactComponent},
   {path: "user-register", component: UserRegisterComponent},
   {path: "foundation-register", component: FoundationRegisterComponent},
-  {path: "change-password", component: ChangePasswordComponent}
+  {path: "change-password", component: ChangePasswordComponent},
+  {path: "how-can-you-help", component: HowCanYouHelpComponent},
 ];
 
 @NgModule({

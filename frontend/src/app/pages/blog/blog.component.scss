@@ -1,0 +1,54 @@
+.blog-title {
+    margin: 1em auto;
+}
+
+.box1, .box2, .box3 {
+    height: 350px;
+    width: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 15%;
+    background-size: 60%;
+    background-color: #E58D2A;
+    border-radius: 17px;
+    border: 0.5px solid black;
+    margin: auto 5%;
+    display: inline-block;
+}
+
+.box1 {
+    background-image: url("../../../assets/images/heart-blog.png");
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+
+.box2 {
+    background-image: url("../../../assets/images/pet-house-blog.png");
+}
+
+.box3 {
+    background-image: url("../../../assets/images/pet-love-blog.png");
+}
+
+.blog-options {
+    flex-direction: row;
+    position: relative;
+    
+}
+
+#blogHelpBtn, #blogAdoptionBtn, #blogBefriendBtn {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-end;
+    display: flex;
+    font-size: 19px;
+    font-weight: bold;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
