@@ -1,4 +1,4 @@
-package org.pktomojapasja.zwierzeglebackend.data.user;
+package org.pktomojapasja.zwierzeglebackend.domain.users;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
