@@ -1,24 +1,23 @@
 package org.pktomojapasja.zwierzeglebackend.api.auth;
 
-import org.pktomojapasja.zwierzeglebackend.domain.users.User;
-import org.pktomojapasja.zwierzeglebackend.domain.users.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import lombok.RequiredArgsConstructor;
+import org.pktomojapasja.zwierzeglebackend.domain.users.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/api/users")
+@RequiredArgsConstructor
+@SecurityRequirement(name = "auth")
 public class UserApi {
+    private final UserService userService;
 
-    @Autowired
-    private UserRepository userRepo;
-
-    @GetMapping("/info")
-    public User getUserDetails() {
-        String email = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        return userRepo.findByEmail(email).get();
+    @GetMapping("/current")
+    public UserDto getUserDetails() {
+        var user = userService.getCurrent();
+        return UserDto.fromUser(user);
     }
 }

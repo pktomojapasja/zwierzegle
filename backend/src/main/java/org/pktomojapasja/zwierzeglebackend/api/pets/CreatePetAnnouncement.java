@@ -2,43 +2,39 @@ package org.pktomojapasja.zwierzeglebackend.api.pets;
 
 import lombok.Value;
 import org.pktomojapasja.zwierzeglebackend.domain.pets.Announcement;
+import org.pktomojapasja.zwierzeglebackend.domain.pets.AnnouncementImage;
+import org.pktomojapasja.zwierzeglebackend.domain.pets.CreateAnnouncement;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Value
 class CreatePetAnnouncement {
-    Long organizationId;
     Long adoptionFormId;
-    Pet pet;
-    Traits traits;
+    ContactDto contact;
+    PetDto pet;
 
-    Announcement toAnnouncement(List<MultipartFile> images) {
-        return Announcement.builder().build();
-    }
+    CreateAnnouncement toCreateAnnouncement(List<MultipartFile> images) {
 
-    @Value
-    static class Pet {
-        String name;
-        Integer age;
-        String species;
-        String color;
-        String race;
-        String sex;
-        String size;
-        String description;
-    }
+        var announcementImages = images != null ? images.stream().map(uploadedImage -> {
+            try {
+                return AnnouncementImage.builder().content(uploadedImage.getBytes()).build();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }).collect(Collectors.toSet()) : null;
 
-    @Value
-    static class Traits {
-        boolean vaccinated;
-        boolean childrenFriendly;
-        boolean trained;
-        boolean aggressive;
-        boolean allergies;
-        boolean sick;
-        boolean acceptsOtherAnimals;
-        boolean disabled;
-        boolean lovesCuddling;
+        return CreateAnnouncement.builder()
+                .contact(Announcement.Contact.builder()
+                        .city(contact.getCity())
+                        .phoneNumber(contact.getPhoneNumber())
+                        .email(contact.getEmail())
+                        .build())
+                .images(announcementImages)
+                .pet(pet.toPet())
+                .build();
     }
 }

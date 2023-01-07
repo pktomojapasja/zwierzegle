@@ -4,13 +4,14 @@ import lombok.RequiredArgsConstructor;
 import org.pktomojapasja.zwierzeglebackend.config.JWTUtil;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
 public class UserService {
-    private final UserRepository userRepo;
+    private final UserRepository userRepository;
     private final JWTUtil jwtUtil;
     private final AuthenticationManager authManager;
     private final PasswordEncoder passwordEncoder;
@@ -18,7 +19,7 @@ public class UserService {
     public String register(User user) {
         String encodedPass = passwordEncoder.encode(user.getPassword());
         user.setPassword(encodedPass);
-        user = userRepo.save(user);
+        user = userRepository.save(user);
         return jwtUtil.generateToken(user.getEmail());
     }
 
@@ -27,5 +28,10 @@ public class UserService {
                 new UsernamePasswordAuthenticationToken(credentials.getEmail(), credentials.getPassword());
         authManager.authenticate(authInputToken);
         return jwtUtil.generateToken(credentials.getEmail());
+    }
+
+    public User getCurrent() {
+        String email = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        return userRepository.findByEmail(email).orElseThrow();
     }
 }

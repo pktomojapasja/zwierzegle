@@ -14,6 +14,10 @@ spring:
     hibernate:
       ddl-auto: create
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
   datasource:
     url: "jdbc:postgresql://localhost:5432/zwierzegle"
     username: zwierzegle_user
@@ -22,3 +26,9 @@ spring:
     user:
       name: config
       password: configPassword
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
