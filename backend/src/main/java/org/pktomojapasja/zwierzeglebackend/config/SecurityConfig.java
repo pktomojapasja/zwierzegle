@@ -2,7 +2,7 @@ package org.pktomojapasja.zwierzeglebackend.config;
 
 
 import jakarta.servlet.http.HttpServletResponse;
-import org.pktomojapasja.zwierzeglebackend.data.user.UserRepository;
+import org.pktomojapasja.zwierzeglebackend.domain.users.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -34,19 +34,20 @@ public class SecurityConfig {
                 .cors()
                 .and()
                 .authorizeHttpRequests()
-                .requestMatchers("/api/user/**").hasRole("USER")
+                .requestMatchers("/api/users/**").hasRole("USER")
+                .requestMatchers("/api/pets/**").hasRole("USER")
                 .requestMatchers("/api/auth/**").permitAll()
                 .requestMatchers("/swagger-ui/**").permitAll()
                 .requestMatchers("/swagger-ui").permitAll()
                 .requestMatchers("/v3/**").permitAll()
-
+                .requestMatchers("/error").permitAll()
+                .requestMatchers("/error/**").permitAll()
                 .requestMatchers("/").permitAll()
                 .requestMatchers("/assets/**").permitAll()
                 .requestMatchers("/favicon.ico").permitAll()
                 .requestMatchers( "/index.html").permitAll()
                 .requestMatchers( "/*.js").permitAll()
                 .requestMatchers( "/*.css").permitAll()
-
                 .and()
                 .userDetailsService(userDetailsService)
                 .exceptionHandling()
