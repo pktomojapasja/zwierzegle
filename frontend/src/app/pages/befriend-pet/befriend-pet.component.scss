@@ -1,0 +1,67 @@
+* {
+    cursor: default;
+}
+
+.befriend-pet-title {
+    margin: 1em auto;
+    justify-content: center;
+}
+
+.third-img, .fifth-img {
+    width: 30%;
+    text-align: right;
+}
+
+.second-img {
+    width: 30%;
+    text-align: right;
+}
+
+.fourth-img {
+    text-align: right;
+}
+
+img {
+    max-width: 70%;
+    height: auto;
+    margin: auto 20px;
+    padding: 10px;
+}
+
+.box1, .box3, .box5 {
+    background-color: transparent;
+    color: #E58D2A;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.box2, .box4 {
+    background-color: #E58D2A;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 17px;
+}
+
+.box4 {
+    padding: 10px;
+}
+
+.third-option, .fifth-option {
+    text-decoration: none;
+    background-position: right;
+    width: 60%;
+}
+
+.second-option, .fourth-option {
+    color: #FFFFFF;
+    text-decoration: none;
+    width: 60%;
+}
+
+.first-option, .second-option, .third-option, .fourth-option, .fifth-option {
+    text-align: justify;
+    font-weight: bold;
+}

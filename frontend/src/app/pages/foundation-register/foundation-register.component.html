@@ -1,0 +1,40 @@
+<div id="register-form">
+    <div class="card card-container">
+        <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+            <div class="register-title">Rejestracja</div>
+            <div class="form-group">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="email" placeholder="E-mail" id="emailInput" [(ngModel)]="form.registration.email" />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="organization-name" placeholder="Nazwa fundacji" id="organizationNameInput" [(ngModel)]="form.contact.organizationName" />
+                </div>
+                <div class="form-group" id="addressGroup">
+                    <input type="text" class="form-control" name="street" placeholder="Ulica" id="streetInput" [(ngModel)]="form.contact.street" />
+                    <input type="text" class="form-control" name="building" placeholder="Budynek" id="buildingInput" [(ngModel)]="form.contact.buildingNumber" />
+                    <input type="text" class="form-control" name="flat" placeholder="Lokal" id="flatInput" [(ngModel)]="form.contact.flatNumber" />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="city" placeholder="Miejscowość" id="cityInput" [(ngModel)]="form.contact.city" />
+                </div>
+                <div class="form-group" id="postGroup">
+                    <input type="text" class="form-control" name="zip-code" placeholder="Kod pocztowy" id="zipCodeInput" [(ngModel)]="form.contact.city" />
+                    <input type="text" class="form-control" name="post" placeholder="Adres poczty" id="postInput" [(ngModel)]="form.registration.password" do zmiany />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="password" placeholder="Hasło" id="passInput" [(ngModel)]="form.registration.password" />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="password" placeholder="Powtórz hasło" id="repeatPassInput" [(ngModel)]="form.registration.password" />
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-block" id="registerBtn">Zarejestruj się</button>
+            </div>
+            <div class="social-group">
+                <button class="submit" id="facebookBtn" onclick="window.location.href='https://facebook.com';">Facebook</button>
+                <button class="submit" id="googleBtn" onclick="window.location.href='https://google.com';">Google</button>
+            </div>
+        </form>
+    </div>
+</div>

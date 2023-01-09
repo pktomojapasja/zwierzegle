@@ -15,6 +15,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './pages/register/register.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { UserRegisterComponent } from './pages/user-register/user-register.component';
+import { FoundationRegisterComponent } from './pages/foundation-register/foundation-register.component';
+import { ChangePasswordComponent } from './pages/change-password/change-password.component';
+import { HowCanYouHelpComponent } from './pages/how-can-you-help/how-can-you-help.component';
+import { HowAdoptComponent } from './pages/how-adopt/how-adopt.component';
+import { BefriendPetComponent } from './pages/befriend-pet/befriend-pet.component';
+import { EditProfileComponent } from './pages/edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +32,14 @@ import { ContactComponent } from './pages/contact/contact.component';
     FooterComponent,
     LoginComponent,
     RegisterComponent,
-    ContactComponent
+    ContactComponent,
+    UserRegisterComponent,
+    FoundationRegisterComponent,
+    ChangePasswordComponent,
+    HowCanYouHelpComponent,
+    HowAdoptComponent,
+    BefriendPetComponent,
+    EditProfileComponent,
   ],
   imports: [
     BrowserModule,

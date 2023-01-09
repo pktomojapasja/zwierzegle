@@ -1,0 +1,37 @@
+* {
+    cursor: default;
+}
+
+.box1, .box3 {
+    background-color: transparent;
+    color: #E58D2A;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.box2 {
+    background-color: #E58D2A;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 17px;
+}
+
+.first-option, .third-option {
+    text-decoration: none;
+    background-position: right;
+}
+
+.second-option {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-left: 500px;
+}
+
+.first-option, .second-option, .third-option {
+    text-align: justify;
+    font-weight: bold;
+    width: 80%;
+}
