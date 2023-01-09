@@ -12,6 +12,28 @@ $primary: #E58D2A;
     --color-primary: #E58D2A;
 }
 
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #E58D2A #eee8e2;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #E58D2A;
+    border-radius: 17px;
+    border: 2px solid #E58D2A;
+  }
+
 @font-face {
     font-family: Monsterrat;
     src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf");
@@ -24,15 +46,16 @@ html * {
 body {
     background-image: url('./assets/images/background.png');
     background-color: #eee8e2;
+    margin-bottom: 1em;
 }
 
-.login-title, .register-title, .blog-title, .how-help-title {
+.login-title, .register-title, .blog-title, .how-help-title, .befriend-pet-title, .edit-profile-title {
     font-size: 40px;
     font-weight: bold;
     position: relative;
     text-align: center;
     justify-content: center;
-    background: -webkit-linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(229,141,42,1) 61%, rgba(255,253,0,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgb(124, 73, 14) 0%, rgba(229,141,42,1) 61%, rgb(196, 175, 70) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -43,7 +66,7 @@ body {
     background: transparent;
 }
 
-#register-form, #login-form, #changePassForm { 
+#register-form, #login-form, #changePassForm, #editProfileForm { 
     margin: 2em auto;
     position: relative;
     padding: 20px;

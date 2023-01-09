@@ -10,6 +10,9 @@ import { UserRegisterComponent } from './pages/user-register/user-register.compo
 import { FoundationRegisterComponent } from './pages/foundation-register/foundation-register.component';
 import { ChangePasswordComponent } from './pages/change-password/change-password.component';
 import { HowCanYouHelpComponent } from './pages/how-can-you-help/how-can-you-help.component';
+import { HowAdoptComponent } from './pages/how-adopt/how-adopt.component';
+import { BefriendPetComponent } from './pages/befriend-pet/befriend-pet.component';
+import { EditProfileComponent } from './pages/edit-profile/edit-profile.component';
 
 const routes: Routes = [
   {path:  "", pathMatch:  "full", component: HomeComponent},
@@ -21,6 +24,9 @@ const routes: Routes = [
   {path: "foundation-register", component: FoundationRegisterComponent},
   {path: "change-password", component: ChangePasswordComponent},
   {path: "how-can-you-help", component: HowCanYouHelpComponent},
+  {path: "how-adopt", component: HowAdoptComponent},
+  {path: "befriend-pet", component: BefriendPetComponent},
+  {path: "edit-profile", component: EditProfileComponent}
 ];
 
 @NgModule({
