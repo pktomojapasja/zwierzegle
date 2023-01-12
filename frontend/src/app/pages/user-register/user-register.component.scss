@@ -1,0 +1,43 @@
+#register-form {
+    margin-top: -20px;
+}
+#addressGroup, #postGroup, #nameGroup {
+    display: flex;
+    flex-direction: row;
+}
+
+#emailInput, #firstNameInput, #lastNameInput, #streetInput, #buildingInput, #flatInput, #cityInput, #zipCodeInput, #postInput, #passInput, #repeatPassInput, #registerBtn {
+    margin: 10px auto;
+    position: relative;
+    border-radius: 17px;
+}
+
+#emailInput, #firstNameInput, #lastNameInput, #streetInput, #buildingInput, #flatInput, #cityInput, #zipCodeInput, #postInput, #passInput, #repeatPassInput {
+    font-size: 14px;
+    height: 38px;
+}
+
+#buildingInput, #flatInput {
+    width: 45%;
+    margin-left: 5%;
+}
+
+#firstNameInput, #lastNameInput {
+    width: 50%;
+    margin: auto;
+}
+
+#lastNameInput {
+    margin-left: 5%;
+}
+
+#zipCodeInput, #firstNameInput {
+    width: 50%;
+    margin-right: 5%;
+}
+
+#registerBtn {
+    width: 100%;
+    color: #FFFFFFFF;
+    font-weight: bold;
+}
