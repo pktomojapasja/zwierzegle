@@ -36,7 +36,7 @@ $primary: #E58D2A;
 
 @font-face {
     font-family: Monsterrat;
-    src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf");
+    src: url("/frontend/src/assets/fonts/Montserrat-VariableFont_wght.ttf");
 }
 
 html * {
@@ -44,7 +44,7 @@ html * {
 }
 
 body {
-    background-image: url('./assets/images/background.png');
+    background-image: url('/frontend/src/assets/images/background.png');
     background-color: #eee8e2;
     margin-bottom: 1em;
 }
